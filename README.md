@@ -25,7 +25,7 @@ The model contains four components which are trained in an end-to-end strategy:
 3. Denoiser
 4. Label decoder
 
-The label encoder produces the label embedding $z_{l(0)} &= f_{\text{label-enc}}(y)$ and the image encoder produces image embedding $z_i &= f_{\text{image-enc}}(X)$, given an Image $X$ and it's corresponding label image $y$.
+The label encoder produces the label embedding $z_{l(0)} &= f_{label-enc}(y)$ and the image encoder produces image embedding $z_i &= f_{image-enc}(X)$, given an Image $X$ and it's corresponding label image $y$.
 A Gaussian block is used to get the perturbed label embedding $z_{l(t)} = \mathcal G(z_{l(0)}, t)$, given noise variance schedulers $\alpha$ and $\beta$ for timestep $t \in (1 \dotsc T)$.
 The denoiser learns the noise variances of label embedding for the transition states and predicts noise $z_{n(t)}$ for timestep $t \in (1 \dotsc T)$.
 The denoised latent space $z_{dn}$ is mapped to segmentation $\hat{y}$ using the label decoder. Our training objective is to learn $q(\hat{y}|X)=\mathbb{E}_{q_{i}(z_{i}|X)}\left[q_{s}(\hat{y}|z)\right]$, where $q_{l}(z \mid y, X) \sim \mathcal{N}(z_{dn}, \sigma^2 \mathrm{I})$.
