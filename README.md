@@ -16,8 +16,6 @@ We have used three datasets in the paper:
 2. [GlaS (2D)](https://www.kaggle.com/datasets/sani84/glasmiccai2015-gland-segmentation) 
 3. [knee (3D)](https://nda.nih.gov/oai/):
 
-Some sample data from all datasets are included here for demonstration.
-
 ## Model Architecture
 ![WorkflowDiagram](assets/WorkflowDiagram.png)
 
