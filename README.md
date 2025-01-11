@@ -1,5 +1,4 @@
 # LDSeg
-This is the official repository of the LDSeg from the paper, "Denoising Diffusions in Latent Space for Medical Image Segmentation"
 --------------------
 
 ## Installation
