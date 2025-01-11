@@ -1,5 +1,5 @@
 # LDSeg
-This is the official repository of LDSeg of the paper "Denoising Diffusions in Latent Space for Medical Image Segmentation".
+This is the official repository of LDSeg from the paper "Denoising Diffusions in Latent Space for Medical Image Segmentation".
 
 ## Installation
 1. Create a virtual environment `conda create -n ldseg python=3.10 -y` and activate it `ldseg`
