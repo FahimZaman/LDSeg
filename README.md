@@ -32,7 +32,7 @@ The denoised latent space $z_{dn}$ is mapped to segmentation $\hat{y}$ using the
 
 ![Diffusion](assets/Diffusion.png)
 
-In the inference phase, image embedding is obtained first using the image encoder, and then the Denoiser is iterated for $t = T \cdots 1$ to obtain ![Math](https://latex.codecogs.com/png.latex?\tilde{z}_{l(0)}), staring with ![Math](https://latex.codecogs.com/png.latex?\tilde{z}_{l(T)}) as a Gaussian random noise $\mathcal{N}(\mathrm{0, I})$. Finally, the trained label decoder is used to get the final segmentation $\hat{y}$.
+In the inference phase, image embedding is obtained first using the image encoder, and then the Denoiser is iterated for $t = T \cdots 1$ to obtain ![Math](https://latex.codecogs.com/png.latex?\tilde{z}_{l(0)}), staring with ![Math](https://latex.codecogs.com/png.latex?\tilde{z}_{l(T)}) as a Gaussian random noise ($\mathcal{N}(\mathrm{0, I})$). Finally, the trained label decoder is used to get the final segmentation $\hat{y}$.
 
 ## Model Training/Inference
 The model can be configured using the cfg.ini file (Instructions are given in the cfg.ini). To run the model for training/inference, use the LDSeg.py file.
