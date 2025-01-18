@@ -1,5 +1,5 @@
 # LDSeg
-This is the official repository of LDSeg from the paper "Latent Diffusion for Medical Image Segmentation: End-to-End Learning for Robust Posterior Prediction with Fast Sampling".
+This is the official repository of LDSeg from the paper "Latent Diffusion for Medical Image Segmentation: End to end learning for fast sampling and accuracy".
 
 ## Installation
 1. Create a virtual environment `conda create -n ldseg python=3.10 -y` and activate it `ldseg`
