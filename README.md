@@ -98,6 +98,7 @@ An example from each dataset is shown to demonstrate the model robustness to noi
 
 ## Citation
 
+```
 @misc{zaman2025latentdiffusionmedicalimage,
       title={Latent Diffusion for Medical Image Segmentation: End to end learning for fast sampling and accuracy},
       author={Fahim Ahmed Zaman and Mathews Jacob and Amanda Chang and Kan Liu and Milan Sonka and Xiaodong Wu},
@@ -107,3 +108,4 @@ An example from each dataset is shown to demonstrate the model robustness to noi
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2407.12952}, 
 }
+```
