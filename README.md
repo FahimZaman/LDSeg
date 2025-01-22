@@ -87,8 +87,23 @@ An example from each dataset is shown to demonstrate the model robustness to noi
 - The OAI is a public-private partnership comprised of five contracts (N01-AR-2-2258; N01-357 AR-2-2259; N01-AR-2-2260; N01-AR-2-2261; N01-AR-2-2262) funded by the National Insti-358 tutes of Health, a branch of the Department of Health and Human Services, and conducted by the359 OAI Study Investigators. Private funding partners include Merck Research Laboratories; Novartis360 Pharmaceuticals Corporation, laxoSmithKline; and Pfizer, Inc. Private sector funding for the361 OAI is managed by the Foundation for the National Institutes of Health. This manuscript was362 prepared using an OAI public use data set and does not necessarily reflect the opinions or views of363 the OAI investigators, the NIH, or the private funding partners.
 - We also thank Aakash Kumar Nain for his DDPM implementation (https://keras.io/examples/generative/ddpm/) which is used as a base for our diffusion models.
 
+--------------------
 
 ## References
 
 1. Ho, Jonathan, Ajay Jain, and Pieter Abbeel. "Denoising diffusion probabilistic models." Advances in neural information processing systems 33 (2020): 6840-6851.
 2. Song, Jiaming, Chenlin Meng, and Stefano Ermon. "Denoising diffusion implicit models." arXiv preprint arXiv:2010.02502 (2020).
+
+--------------------
+
+## Citation
+
+@misc{zaman2025latentdiffusionmedicalimage,
+      title={Latent Diffusion for Medical Image Segmentation: End to end learning for fast sampling and accuracy}, 
+      author={Fahim Ahmed Zaman and Mathews Jacob and Amanda Chang and Kan Liu and Milan Sonka and Xiaodong Wu},
+      year={2025},
+      eprint={2407.12952},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2407.12952}, 
+}
