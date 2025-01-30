@@ -42,7 +42,7 @@ python3 LDSeg.py
 ```
 
 ## Results
-A few examples of segmentation are given below for the Echo, GlaS and Knee datasets. Top row shows the source images/mmageslices, 2nd and 3rd row shows the reverse diffusion for the latent space and the segmentation outputs. The bottom layer shows the segmentations overlay on the source images.
+A few examples of segmentation are given below for the Echo, GlaS and Knee datasets. Top row shows the source images/imageslices, 2nd and 3rd row shows the reverse diffusion for the latent space and the segmentation outputs. The bottom layer shows the segmentations overlay on the source images.
 
 --------------------
 
