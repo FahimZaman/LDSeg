@@ -14,7 +14,7 @@ We have used three datasets in the paper:
 2. [GlaS (2D)](https://www.kaggle.com/datasets/sani84/glasmiccai2015-gland-segmentation) 
 3. [knee (3D)](https://nda.nih.gov/oai/):
 
-For demo purpose, few examples of source images, label images and the model weights of the GlaS dataset are added in the 'data' directory.
+For demo purpose, few examples of source images, label images and the model weights of the GlaS and Knee dataset are added in the 'data' directory.
 
 ## Model Architecture
 ![method](assets/Method.png)
@@ -35,7 +35,7 @@ The denoised latent space $z_{dn}$ is then mapped to segmentation $\hat{y}$ usin
 In the inference phase, image embedding is obtained first using the image encoder, and then the score model is iterated for $t = T \cdots 1$ to obtain ![Math](https://latex.codecogs.com/png.latex?\tilde{z}_{l(0)}), staring with ![Math](https://latex.codecogs.com/png.latex?\tilde{z}_{l(T)}) as a Gaussian random noise $(\mathcal{N}(\mathrm{0, I}))$. Finally, the trained label decoder is used to get the final segmentation $\hat{y}$.
 
 ## Model Training/Inference
-The model can be configured using the cfg.ini file (Instructions are given in the cfg.ini). To run the model for training/inference, use the LDSeg.py file.
+The model can be configured using the cfg.ini file (Instructions are given in the cfg.ini). To run the model for training/inference, use the LDSeg.py (LDSeg3D.py for 3D images) file.
 
 ```bash
 python3 LDSeg.py
