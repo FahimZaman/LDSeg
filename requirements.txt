@@ -7,6 +7,5 @@ imageio
 SimpleITK
 scikit-learn
 scikit-image
-PyMCubes
 natsort
 tqdm

@@ -75,6 +75,16 @@ def plot_data(img_array, lbl_array):
     plt.axis('off')
     plt.tight_layout()
     plt.show()
+    
+def plot_data_3D(img_array, lbl_array, slc=80):
+    '''Plots sample image from dataset'''
+    idx = random.randint(0,len(img_array)-1)
+    plt.imshow(img_array[idx][slc], cmap='gray')
+    for n in range(np.max(lbl_array)):
+        show_mask(np.where(lbl_array[idx][slc]==n+1,1,0), alpha=0.35, random_color=n+1)
+    plt.axis('off')
+    plt.tight_layout()
+    plt.show()
 
 def plot_sampling(hm_intermediates, idx=0):
     '''Plots reverse diffusion steps given intermediate denoised images'''
@@ -85,6 +95,22 @@ def plot_sampling(hm_intermediates, idx=0):
     plt.figure(figsize=(3*sampling_steps,5))
     for i in range(len(steps)):
         img = hm_intermediates[steps[i]][idx]
+        plt.subplot(1,sampling_steps,i+1)
+        plt.imshow(img, cmap='gray')
+        plt.axis('off')
+    plt.suptitle('Reverse Diffusion', fontsize=5*sampling_steps)
+    plt.tight_layout()
+    plt.show()
+    
+def plot_sampling_3D(hm_intermediates, idx=0, slc=6):
+    '''Plots reverse diffusion steps given intermediate denoised images'''
+    sampling_steps = len(hm_intermediates)
+    if sampling_steps>=10:
+        sampling_steps = 10
+    steps = (np.linspace(0, len(hm_intermediates)-1, sampling_steps).astype(np.uint64))
+    plt.figure(figsize=(3*sampling_steps,5))
+    for i in range(len(steps)):
+        img = hm_intermediates[steps[i]][idx][slc]
         plt.subplot(1,sampling_steps,i+1)
         plt.imshow(img, cmap='gray')
         plt.axis('off')
@@ -160,6 +186,22 @@ def plot_seg(img, prediction, nplot):
         plt.subplot(1,nplot,i+1)
         plt.imshow(img[idx[i]])
         show_mask(np.where(prediction[idx[i]]==1,1,0), alpha=0.35, random_color=4)
+        plt.title(f'Img-{idx[i]:d}', fontsize=30)
+        plt.axis('off')
+    plt.tight_layout()
+    plt.show()
+    
+def plot_seg_3D(img, prediction, nplot, slc=80):
+    '''Plot segmentation results'''
+    idx = random.sample(range(0, len(img)), nplot)
+    plt.figure(figsize=(5*nplot,5))
+    for i in range(len(idx)):
+        plt.subplot(1,nplot,i+1)
+        plt.imshow(img[idx[i]][slc], cmap='gray')
+        for n in range(np.max(prediction)):
+            show_mask(np.where(prediction[idx[i]][slc]==n+1, 1, 0), 
+                      alpha=0.35, 
+                      random_color=n+1)
         plt.title(f'Img-{idx[i]:d}', fontsize=30)
         plt.axis('off')
     plt.tight_layout()
